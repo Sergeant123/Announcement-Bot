@@ -22,9 +22,12 @@ def webhook():
   sentence = data['text']
 
 #############################################
+  negatives = ["not", "nobody", "cannot", "knot"]
+          
   if data['name'] != 'Lunar Bot':
-    if ("not" and "nobody" and "cannot" and "knot") not in sentence.lower():
-      if "no" in sentence.lower():
+    for i in range(len(negatives)):    
+      if negative[i] not in sentence.lower():
+        if "no" in sentence.lower():
            msg = "no u"
            send_message(msg)
     if "911" in data['text']:
@@ -34,6 +37,7 @@ def webhook():
     num = random.randint(0,len(satania)-1)
     msg = satania[num]
     send_message(msg)
+
 
 #########################################
   return "ok", 200
