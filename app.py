@@ -26,10 +26,11 @@ def webhook():
           
   if data['name'] != 'Lunar Bot':
     for i in range(len(negatives)):    
-      if negative[i] not in sentence.lower():
-        if "no" in sentence.lower():
-           msg = "no u"
-           send_message(msg)
+      if negative[i] in sentence.lower():
+        pass
+      elif "no" in sentence.lower():
+        msg = "no u"
+        send_message(msg)
     if "911" in data['text']:
            msg = '911'
            send_message(msg)
