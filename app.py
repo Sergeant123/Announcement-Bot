@@ -24,10 +24,9 @@ def webhook():
     sentence = data['text']
 
     if data['name'] != 'Satania Bot':
-        if "not" not in sentence.lower():
-            if "no" in sentence.lower():
-               msg = "no u"
-               send_message(msg)
+         if "no" in sentence.lower():
+           msg = "no u"
+           send_message(msg)
         if "911" in data['text']:
            msg = '911'
            send_message(msg)
