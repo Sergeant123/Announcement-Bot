@@ -25,7 +25,7 @@ def webhook():
 
 #############################################
   if data['name'] != 'Lunar Bot':
-    if "not" not in sentence.lower():
+    if "not" and "cannot" not in sentence.lower():
       if "no" in sentence.lower():
            msg = "no u"
            send_message(msg)
