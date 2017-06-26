@@ -8,9 +8,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
 
-satania = ['https://i.imgur.com/a0c99Xy.jpg',' https://i.imgur.com/CYrJCal.jpg', 'https://i.imgur.com/dbNDYcx.jpg', 
-           'https://i.imgur.com/bhnECWl.jpg', 'https://i.imgur.com/gUcWy4j.jpg',
-           'https://i.ytimg.com/vi/fjbxTE4bx4k/maxresdefault.jpg'
+satania = ['https://i.groupme.com/1280x720.png.4876a31d98d043f19873136abd816e40'
           ]
            
 
