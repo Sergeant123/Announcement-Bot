@@ -8,11 +8,13 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
 
-satania = ['https://i.groupme.com/1280x720.png.4876a31d98d043f19873136abd816e40'
+satania = ['https://i.imgur.com/a0c99Xy.jpg',' https://i.imgur.com/CYrJCal.jpg', 'https://i.imgur.com/dbNDYcx.jpg', 
+           'https://i.imgur.com/bhnECWl.jpg', 'https://i.imgur.com/gUcWy4j.jpg',
+           'https://i.ytimg.com/vi/fjbxTE4bx4k/maxresdefault.jpg'
           ]
 negatives = ['cannot', 'not', 'knot', 'annoyed', 'annoy', 'annoying']
 
-continue = True 
+count = 0
 
 
 
@@ -26,26 +28,19 @@ def webhook():
 
 #############################################          
   if data['name'] != 'Lunar Bot':
-    for i in range (0, len(negatives)):
-      if negatives[i] in sentence.lower():
-          continue = False
-      if continue = True:
-       if "no" in sentence.lower():
-         msg = "no u"
-         send_message(msg)
+    if "no" in sentence.lower():
+      msg = "no u"
+      send_message(msg)
     if "911" in data['text']:
-           msg = '911'
-           send_message(msg)
+      msg = '911'
+      end_message(msg)
   if data['text'] == '!lasagna':
     num = random.randint(0,len(satania)-1)
     msg = satania[num]
     send_message(msg)
-    if "911" in data['text']:
-           msg = '911'
-           send_message(msg)
-  if data['text'] == '!lasagna':
-    num = random.randint(0,len(satania)-1)
-    msg = satania[num]
+  if sentence == "!count":
+    count += 1
+    msg = count
     send_message(msg)
 
 
