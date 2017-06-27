@@ -4,7 +4,7 @@ import os
 import sys
 import json
 import random
-from darth-bot import cat_facts
+from database.cat_facts import test
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
