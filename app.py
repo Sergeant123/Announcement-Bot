@@ -4,6 +4,7 @@ import os
 import sys
 import json
 import random
+from darth-bot import cat_facts
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
@@ -45,7 +46,7 @@ def webhook():
   
   if sentence == '!lasagna':
     num = random.randint(0,len(satania))
-    msg = test[0]
+    msg = cat_facts.test[0]
     send_message(msg)
 
 
