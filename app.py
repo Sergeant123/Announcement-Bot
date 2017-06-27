@@ -22,22 +22,22 @@ def webhook():
   log('Recieved {}'.format(data))
   sentence = data['text']
 
-#############################################          
+#############################################
   if data['name'] != 'Lunar Bot':
     if "no" in sentence.lower():
-      msg = "no u"
-      send_message(msg)
+           msg = "no u"
+           send_message(msg)
     if "911" in data['text']:
-      msg = '911'
-      send_message(msg)
+            msg = '911'
+            send_message(msg)
   if "league" in sentence.lower():
-      msg = 'No'
-      send_message(msg)
+            msg = 'No'
+            send_message(msg)
   if "awoo" in sentence.lower():
-      msg = 'Awoo"
+      msg = "Awoo"
       send_message(msg)
   if "shut up" in sentence.lower():
-      msg = "pls no bulli :('
+      msg = "pls no bulli :("
       send_message(msg)
   if "fite me" in sentence.lower():
       msg = "fite me"
