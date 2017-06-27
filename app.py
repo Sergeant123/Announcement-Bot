@@ -10,7 +10,8 @@ from flask import Flask, request
 
 satania = ['https://i.groupme.com/1280x720.png.4876a31d98d043f19873136abd816e40'
           ]
-           
+negatives = ['cannot', 'not', 'knot', 'annoyed', 'annoy', 'annoying']
+
 
 
 app = Flask(__name__)
@@ -21,16 +22,22 @@ def webhook():
   log('Recieved {}'.format(data))
   sentence = data['text']
 
-#############################################
-  negatives = ["not", "nobody", "cannot", "knot"]
-          
-  if data['name'] != 'Lunar Bot':
-    for i in range(len(negatives)):    
-      if negative[i] in sentence.lower():
-        pass
-      elif "no" in sentence.lower():
-        msg = "no u"
-        send_message(msg)
+#############################################          
+  if data['name'] != 'Satania Bot':
+    if "no" in sentence.lower():
+      for i in range (0, len(negatives)-1):
+        if negatives[i] in sentence.lower():
+          pass
+        else:
+          msg = "no u"
+          send_message(msg)
+    if "911" in data['text']:
+           msg = '911'
+           send_message(msg)
+  if data['text'] == '!lasagna':
+    num = random.randint(0,len(satania)-1)
+    msg = satania[num]
+    send_message(msg)
     if "911" in data['text']:
            msg = '911'
            send_message(msg)
