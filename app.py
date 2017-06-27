@@ -14,12 +14,6 @@ satania = ['https://i.imgur.com/a0c99Xy.jpg',' https://i.imgur.com/CYrJCal.jpg',
           ]
 negatives = ['cannot', 'not', 'knot', 'annoyed', 'annoy', 'annoying']
 
-global COUNT
-COUNT = 0
-
-
-
-
 app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
@@ -27,8 +21,6 @@ def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
   sentence = data['text']
-  count = 0
-
 
 #############################################          
   if data['name'] != 'Lunar Bot':
@@ -37,15 +29,23 @@ def webhook():
       send_message(msg)
     if "911" in data['text']:
       msg = '911'
-      end_message(msg)
+      send_message(msg)
+  if "league" in sentence.lower():
+      msg = 'No'
+      send_message(msg)
+  if "awoo" in sentence.lower():
+      msg = 'Awoo"
+      send_message(msg)
+  if "shut up" in sentence.lower():
+      msg = "pls no bulli :('
+      send_message(msg)
+  if "fite me" in sentence.lower():
+      msg = "fite me"
+      send_message(msg)
+  
   if sentence == '!lasagna':
-    num = random.randint(0,len(satania)-1)
+    num = random.randint(0,len(satania))
     msg = satania[num]
-    send_message(msg)
-  if data['text'] == "!count":
-    global COUNT    
-    COUNT += 1
-    msg = count
     send_message(msg)
 
 
