@@ -4,7 +4,7 @@ import os
 import sys
 import json
 import random
-import catfacts
+import cat_facts
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
