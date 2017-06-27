@@ -14,6 +14,9 @@ satania = ['https://i.imgur.com/a0c99Xy.jpg',' https://i.imgur.com/CYrJCal.jpg',
           ]
 negatives = ['cannot', 'not', 'knot', 'annoyed', 'annoy', 'annoying']
 
+global COUNT
+COUNT = 0
+
 
 
 
@@ -40,7 +43,8 @@ def webhook():
     msg = satania[num]
     send_message(msg)
   if data['text'] == "!count":
-    count += 1
+    global COUNT    
+    COUNT += 1
     msg = count
     send_message(msg)
 
