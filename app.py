@@ -23,7 +23,7 @@ def webhook():
   sentence = data['text']
 
 #############################################          
-  if data['name'] != 'Satania Bot':
+  if data['name'] != 'Lunar Bot':
     if "no" in sentence.lower():
       for i in range (0, len(negatives)-1):
         if negatives[i] in sentence.lower():
