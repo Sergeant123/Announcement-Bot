@@ -3,7 +3,8 @@
 import os
 import sys
 import json
-import random          
+import random
+import cat_facts
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
@@ -46,6 +47,9 @@ def webhook():
   if sentence == '!lasagna':
     num = random.randint(0,len(satania))
     msg = satania[num]
+    send_message(msg)
+  if sentence == '!catfacts'
+    msg = catfacts.test[0]
     send_message(msg)
 
 
