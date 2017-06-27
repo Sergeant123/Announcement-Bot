@@ -1,1 +1,1 @@
-test = ['test']
+catfacts = ['test', 'test2']
