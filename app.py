@@ -59,16 +59,16 @@ def webhook():
     num = random.randint(0, (len(catfacts)-1))
     msg = catfacts[num]
     send_message(msg)
-  if sentence == '!thanks'
+  if sentence == '!thanks':
     msg = reaction[0]
     send_message(msg)
-  if sentence == '!dog'
+  if sentence == '!dog':
     msg = reaction[1]
     send_message(msg)
-  if sentence == '!confusion' or '!confuse'
+  if sentence == '!confuse':
     msg = reaction[2]
     send_message(msg)
-  if sentence == '!stop'
+  if sentence == '!stop':
     msg = reaction[3]
     send_message(msg)
 
