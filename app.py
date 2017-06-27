@@ -45,7 +45,7 @@ def webhook():
   
   if sentence == '!lasagna':
     num = random.randint(0,len(satania))
-    msg = cat_facts.test[0]
+    msg = test[0]
     send_message(msg)
 
 
