@@ -38,7 +38,7 @@ def webhook():
     num = random.randint(0,len(satania)-1)
     msg = satania[num]
     send_message(msg)
-  if sentence == "!count":
+  if data['text'] == "!count":
     count += 1
     msg = count
     send_message(msg)
