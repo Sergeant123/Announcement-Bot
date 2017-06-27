@@ -4,10 +4,11 @@ import os
 import sys
 import json
 import random
-from database.cat_facts import test
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
+
+from database.cat_facts import catfacts
 
 satania = ['https://i.imgur.com/a0c99Xy.jpg',' https://i.imgur.com/CYrJCal.jpg', 'https://i.imgur.com/dbNDYcx.jpg', 
            'https://i.imgur.com/bhnECWl.jpg', 'https://i.imgur.com/gUcWy4j.jpg',
