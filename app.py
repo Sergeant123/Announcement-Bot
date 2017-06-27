@@ -12,6 +12,8 @@ satania = ['https://i.groupme.com/1280x720.png.4876a31d98d043f19873136abd816e40'
           ]
 negatives = ['cannot', 'not', 'knot', 'annoyed', 'annoy', 'annoying']
 
+continue = True 
+
 
 
 app = Flask(__name__)
@@ -25,7 +27,6 @@ def webhook():
 #############################################          
   if data['name'] != 'Lunar Bot':
     for i in range (0, len(negatives)):
-      continue = True 
       if negatives[i] in sentence.lower():
           continue = False
       if continue = True:
