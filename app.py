@@ -30,17 +30,17 @@ def webhook():
     if "911" in data['text']:
             msg = '911'
             send_message(msg)
+    if "awoo" in sentence.lower():
+           msg = 'awoo'
+           send_message(msg)
+    if 'fite me' in sentence.lower():
+           msg = 'fite me'
+           send_message(msg)
   if "league" in sentence.lower():
             msg = 'No'
             send_message(msg)
-  if "awoo" in sentence.lower():
-      msg = "Awoo"
-      send_message(msg)
   if "shut up" in sentence.lower():
-      msg = "pls no bulli :("
-      send_message(msg)
-  if "fite me" in sentence.lower():
-      msg = "fite me"
+      msg = "pls no bulli"
       send_message(msg)
   
   if sentence == '!lasagna':
