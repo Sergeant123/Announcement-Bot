@@ -43,15 +43,18 @@ def webhook():
       send_message(msg)
 #Commands
   if sentence == '!roll20':
-     num = random.randint(0,19)
-     msg = num
-     send_message(msg)
+     num = random.randint(0,19)+1
+     if num == 1
+        msg = "1... you suck"
+     else:
+        msg = num
+        send_message(msg)
   if sentence == '!lasagna':
-    num = random.randint(0,len(lasagna))
+    num = random.randint(0,(len(lasagna)-1))
     msg = lasagna[num]
     send_message(msg)
   if sentence == '!catfacts':
-    num = random.randint(0, len(catfacts))
+    num = random.randint(0, (len(catfacts)-1))
     msg = catfacts[num]
     send_message(msg)
 
