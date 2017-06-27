@@ -4,7 +4,7 @@ import os
 import sys
 import json
 import random
-import cat_facts.py
+#import cat_facts.py
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
@@ -49,7 +49,7 @@ def webhook():
     msg = satania[num]
     send_message(msg)
   if sentence == '!catfacts'
-    msg = cat_facts.test[0]
+    msg = catfacts[0]
     send_message(msg)
 
 
@@ -69,3 +69,5 @@ def send_message(msg):
 def log(msg):
   print(str(msg))
 sys.stdout.flush()
+
+catfacts = ['fact']
