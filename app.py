@@ -14,7 +14,6 @@ satania = ['https://i.imgur.com/a0c99Xy.jpg',' https://i.imgur.com/CYrJCal.jpg',
           ]
 negatives = ['cannot', 'not', 'knot', 'annoyed', 'annoy', 'annoying']
 
-count = 0
 
 
 
@@ -25,6 +24,8 @@ def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
   sentence = data['text']
+  count = 0
+
 
 #############################################          
   if data['name'] != 'Lunar Bot':
@@ -34,7 +35,7 @@ def webhook():
     if "911" in data['text']:
       msg = '911'
       end_message(msg)
-  if data['text'] == '!lasagna':
+  if sentence == '!lasagna':
     num = random.randint(0,len(satania)-1)
     msg = satania[num]
     send_message(msg)
