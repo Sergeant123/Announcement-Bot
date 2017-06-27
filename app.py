@@ -49,7 +49,7 @@ def webhook():
     msg = satania[num]
     send_message(msg)
   if sentence == '!catfacts'
-    msg = catfacts.test[0]
+    msg = cat_facts.test[0]
     send_message(msg)
 
 
