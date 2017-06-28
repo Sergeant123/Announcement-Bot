@@ -23,7 +23,7 @@ def create_response(sentence):
         msg = 'No, David.'
 
     #Commands
-    if sentence == '!count'
+    if sentence == '!count':
         global NUMBER
         NUMBER +=1
         msg = NUMBER
