@@ -1,5 +1,5 @@
 def create_response(sentence):
-    msg = []
+    msg = {}
     if "no" in sentence:
         msg = "no u"
     return msg
