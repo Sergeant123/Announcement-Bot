@@ -4,7 +4,7 @@ from database.lasagna import lasagna
 from database.reactions import reaction
 #Make this one database
 
-words = ['nerd', 'shut up']
+bulli = ['nerd', 'shut up', 'kys', 'nurd', 'loser', 'git gud', 'noob', 'newb', 'n00b', 'stupid']
 
 NUMBER = 0
 def create_response(sentence):
@@ -24,7 +24,7 @@ def create_response(sentence):
         msg = 'tulta'
     if 'league' in sentence:
         msg = 'No, David.'
-    if 'Satan' in sentence:
+    if 'satan' in sentence:
         msg = 'Thats me'
     if any(word in sentence for word in words):
         msg = "pls no bulli"
