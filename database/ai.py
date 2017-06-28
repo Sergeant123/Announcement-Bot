@@ -1,6 +1,5 @@
-def create_response(sentence, name):
+def create_response(sentence):
     msg = {}
-    if name != "Lunar Bot":
-        if "no" in sentence:
-            msg = "no u"
+    if "no" in sentence:
+        msg = "no u"
     return msg
