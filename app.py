@@ -3,16 +3,11 @@
 import os
 import sys
 import json
-import random
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
 
-from database.cat_facts import catfacts
-from database.lasagna import lasagna
-from database.reactions import reaction
-
-negatives = ['cannot', 'not', 'knot', 'annoyed', 'annoy', 'annoying']
+from database.ai import create_response(sentence)
 
 app = Flask(__name__)
 
@@ -20,60 +15,11 @@ app = Flask(__name__)
 def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
-  sentence = data['text']
-
-#############################################
-  if data['name'] != 'Lunar Bot':
-    if "no" in sentence.lower():
-           msg = "no u"
-           send_message(msg)
-    if "911" in data['text']:
-            msg = '911'
-            send_message(msg)
-    if "awoo" in sentence.lower():
-           msg = 'awoo'
-           send_message(msg)
-    if 'fite me' in sentence.lower():
-           msg = 'fite me'
-           send_message(msg)
-  if "league" in sentence.lower():
-            msg = 'No'
-            send_message(msg)
-  if "shut up" in sentence.lower():
-      msg = "pls no bulli"
-      send_message(msg)
-#Commands
-  if sentence == '!roll20':
-     num = ((random.randint(0,19))+1)
-     msg = num
-     send_message(msg)
-  if sentence == '!roll6':
-     num = ((random.randint(0,5))+1)
-     msg = num
-     send_message(msg)
-  if sentence == '!lasagna':
-    num = random.randint(0,(len(lasagna)-1))
-    msg = lasagna[num]
+  data = data['text']
+  sentence = data.lower()
+  response = create_response(sentence)
+  if response:
     send_message(msg)
-  if sentence == '!catfacts':
-    num = random.randint(0, (len(catfacts)-1))
-    msg = catfacts[num]
-    send_message(msg)
-  if sentence == '!thanks':
-    msg = reaction[0]
-    send_message(msg)
-  if sentence == '!dog':
-    msg = reaction[1]
-    send_message(msg)
-  if sentence == '!confuse':
-    msg = reaction[2]
-    send_message(msg)
-  if sentence == '!stop':
-    msg = reaction[3]
-    send_message(msg)
-
-
-#########################################
   return "ok", 200
 
 def send_message(msg):
@@ -89,4 +35,3 @@ def send_message(msg):
 def log(msg):
   print(str(msg))
 sys.stdout.flush()
-
