@@ -16,11 +16,11 @@ def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
   parse = data['text']
-  name = data['name']
   sentence = parse.lower()
-  response = create_response(sentence, name)
+  response = create_response(sentence)
   if response:
-    send_message(response, name)
+    if data['name'] != "Lunar Bot":
+      send_message(response)
   return "ok", 200
 
 def send_message(msg):
