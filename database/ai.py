@@ -12,8 +12,10 @@ def create_response(sentence):
     msg = {}
     
     #Responses
-    if len(sentence) > 55:
+    if len(sentence) > 225:
         msg = "lol do you really expect me to read that?"
+    if "not david" in sentence:
+        msg = "I don't care."
     if any(word in sentence for word in bulli):
         msg = "pls no bulli"
     if "no" in sentence:
@@ -21,7 +23,7 @@ def create_response(sentence):
     if "911" in sentence:
         msg = '911'
     if "awoo" in sentence:
-        msg = "awooo"
+        msg = "Awooo"
     if 'fite' in sentence:
         msg = "fite me"
     if 'tulta' in sentence:
@@ -56,5 +58,11 @@ def create_response(sentence):
         msg = reaction[2]
     if sentence == '!stop':
         msg = reaction[3]
+    if sentence == '!obama':
+        msg = reaction[4]
+    if sentence == '!re':
+        msg = reaction[5]
+    if sentence == '!whatever':
+        msg = reaction[6]
 
     return msg
