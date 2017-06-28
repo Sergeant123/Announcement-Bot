@@ -7,7 +7,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
 
-from database.ai import create_response(sentence)
+from database.ai import create_response
 
 app = Flask(__name__)
 
