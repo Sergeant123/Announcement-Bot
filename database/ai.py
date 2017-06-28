@@ -4,8 +4,11 @@ from database.lasagna import lasagna
 from database.reactions import reaction
 #Make this one database
 
+list = ['nerd', 'shut up']
+
 NUMBER = 0
 def create_response(sentence):
+    global NUMBER
     msg = {}
     
     #Responses
@@ -21,10 +24,15 @@ def create_response(sentence):
         msg = 'tulta'
     if 'league' in sentence:
         msg = 'No, David.'
+        
+    for i in range(1):
+        if list[i] in sentence:
+            msg = "pls no bulli"
+    if 'Satan' in sentence or 'Satania' in sentence:
+        msg = 'Thats me'
 
     #Commands
     if sentence == '!count':
-        global NUMBER
         NUMBER +=1
         msg = NUMBER
     if sentence == '!roll20':
