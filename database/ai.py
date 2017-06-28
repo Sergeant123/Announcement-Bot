@@ -4,7 +4,7 @@ from database.lasagna import lasagna
 from database.reactions import reaction
 #Make this one database
 
-list = ['nerd', 'shut up']
+words = ['nerd', 'shut up']
 
 NUMBER = 0
 def create_response(sentence):
@@ -24,10 +24,10 @@ def create_response(sentence):
         msg = 'tulta'
     if 'league' in sentence:
         msg = 'No, David.'
-    if list[0:1] in sentence:
-        msg = "pls no bulli"
     if 'Satan' in sentence:
         msg = 'Thats me'
+    if any(word in sentence for word in words):
+        msg = "pls no bulli"
 
     #Commands
     if sentence == '!count':
