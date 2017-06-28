@@ -24,11 +24,9 @@ def create_response(sentence):
         msg = 'tulta'
     if 'league' in sentence:
         msg = 'No, David.'
-        
-    for i in range(2):
-        if list[i] in sentence:
-            msg = "pls no bulli"
-    if 'Satania' in sentence:
+    if list[0:1] in sentence:
+        msg = "pls no bulli"
+    if 'Satan' in sentence:
         msg = 'Thats me'
 
     #Commands
