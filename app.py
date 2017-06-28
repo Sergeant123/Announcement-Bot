@@ -15,11 +15,11 @@ app = Flask(__name__)
 def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
-  data = data['text']
-  sentence = data.lower()
+  parse = data['text']
+  sentence = parse.lower()
   response = create_response(sentence)
   if response:
-    send_message(msg)
+    send_message(response)
   return "ok", 200
 
 def send_message(msg):
