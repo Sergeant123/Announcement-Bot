@@ -25,10 +25,10 @@ def create_response(sentence):
     if 'league' in sentence:
         msg = 'No, David.'
         
-    for i in range(1):
+    for i in range(2):
         if list[i] in sentence:
             msg = "pls no bulli"
-    if 'Satan' in sentence or 'Satania' in sentence:
+    if 'Satania' in sentence:
         msg = 'Thats me'
 
     #Commands
