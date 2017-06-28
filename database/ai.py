@@ -26,7 +26,7 @@ def create_response(sentence):
         msg = 'No, David.'
     if 'satan' in sentence:
         msg = 'Thats me'
-    if any(word in sentence for word in words):
+    if any(word in sentence for word in bulli):
         msg = "pls no bulli"
 
     #Commands
