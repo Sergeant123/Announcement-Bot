@@ -1,4 +1,3 @@
-
 import random
 from database.cat_facts import catfacts
 from database.lasagna import lasagna
@@ -66,4 +65,4 @@ def create_response(sentence):
     if sentence == '!whatever':
         msg = reaction[6]
 
-return msg
+    return msg
