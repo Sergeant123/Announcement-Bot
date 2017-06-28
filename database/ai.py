@@ -4,7 +4,7 @@ from database.lasagna import lasagna
 from database.reactions import reaction
 #Make this one database
 
-COUNT = 0
+NUMBER = 0
 def create_response(sentence):
     msg = {}
     
@@ -24,9 +24,9 @@ def create_response(sentence):
 
     #Commands
     if sentence == '!count'
-        global COUNT
-        COUNT +=1
-        msg = COUNT
+        global NUMBER
+        NUMBER +=1
+        msg = NUMBER
     if sentence == '!roll20':
         num = ((random.randint(0,19))+1)
         msg = num
