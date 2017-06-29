@@ -13,16 +13,25 @@ def create_response(sentence):
     msg = {}
     
     #Limited Responses
-    if NUMBER%3 == 0:
-        if "no" in sentence:
+    if "no" in sentence:
+        NUMBER+=1
+        if NUMBER%3 == 0:
                 msg = "no u"
-        if "911" in sentence:
+    if "911" in sentence:
+        NUMBER+=1
+        if NUMBER%3 == 0:
                 msg = '911'
-        if "awoo" in sentence:
+    if "awoo" in sentence:
+        NUMBER+=1
+        if NUMBER%3 == 0:
                 msg = "Awooo"
-        if 'fite' in sentence:
+    if 'fite' in sentence:
+        NUMBER+=1
+        if NUMBER%3 == 0:
                 msg = "fite me"
-        if 'tulta' in sentence:
+    if 'tulta' in sentence:
+        NUMBER+=1
+        if NUMBER%3 == 0:
                 msg = 'tulta'
         
     #Responses
