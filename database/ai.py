@@ -37,7 +37,7 @@ def create_response(sentence):
         msg = 'Blaze it.'
     if '4:20' in sentence:
         msg = 'Blaze it.'
-    if 'zk' in sentence:
+    if '..' in sentence:
         msg = {}    
     if len(sentence) > 170:
         msg = "lol do you really expect me to read that?"
