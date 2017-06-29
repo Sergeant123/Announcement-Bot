@@ -12,36 +12,32 @@ def create_response(sentence):
     global NUMBER
     msg = {}
     
+    #Limited Responses
+    if NUMBER%3 == 0:
+        if "no" in sentence:
+                msg = "no u"
+        if "911" in sentence:
+                msg = '911'
+        if "awoo" in sentence:
+                msg = "Awooo"
+        if 'fite' in sentence:
+                msg = "fite me"
+        if 'tulta' in sentence:
+                msg = 'tulta'
+        
     #Responses
-    if any(word in sentence for word in bulli):
-        msg = "pls no bulli"
-    if "no" in sentence:
-        msg = "no u"
-    if "not david" in sentence:
-        msg = "I don't care."
-    if "911" in sentence:
-        msg = '911'
-    if "awoo" in sentence:
-        msg = "Awooo"
-    if 'fite' in sentence:
-        msg = "fite me"
-    if 'tulta' in sentence:
-        msg = 'tulta'
-    if 'league' in sentence:
-        msg = 'No, David.'
     if 'satan' in sentence:
         msg = 'Thats me.'
-    if 'lit' in sentence:
-        msg = 'Its lit fam'
-    if '420' in sentence:
-        msg = 'Blaze it.'
-    if '4:20' in sentence:
-        msg = 'Blaze it.'
-    if '..' in sentence:
-        msg = {}    
+    if any(word in sentence for word in bulli):
+        msg = "pls no bulli"
+    if 'league' in sentence:
+        msg = 'No, David.'
     if len(sentence) > 170:
         msg = "lol do you really expect me to read that?"
-
+    
+    #Disable Response
+    if '..' in sentence:
+        msg = {}    
 
     #Commands
     if sentence == '!count':
