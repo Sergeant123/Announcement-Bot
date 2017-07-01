@@ -15,7 +15,7 @@ def create_response(sentence):
     #Limited Responses
     if "no" in sentence:
         NUMBER+=1
-        if NUMBER%2 == 0:
+        if NUMBER%3 == 0:
                 msg = "no u"
     if "911" in sentence:
         NUMBER+=1
