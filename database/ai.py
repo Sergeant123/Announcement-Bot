@@ -61,7 +61,7 @@ def create_response(sentence):
     if sentence == '!lasagna':
         num = random.randint(0,(len(lasagna)-1))
         msg = lasagna[num]
-    if sentence == '!lasagna':
+    if sentence == '!cruise':
         num = random.randint(0,(len(cruise)-1))
         msg = cruise[num]
     if sentence == '!catfacts':
