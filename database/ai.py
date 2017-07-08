@@ -7,10 +7,16 @@ from database.images import cruise, lasagna
 bulli = ['nerd', 'shut up', 'kys', 'nurd', 'loser', 'git gud', 'noob', 'newb', 'n00b', 'stupid', 'idiot', 'dumb', 'dum',
         'shut it', 'up shut', 'idot', 'ideot', 'baka', 'retard']
 
+league = ['pat', 'lea', 'gue', 'league', 'legends']
+
 NUMBER = 0
 def create_response(sentence):
     global NUMBER
     msg = {}
+        
+    if name = "Optimus Prime":
+        if any(word in sentence for word in league):
+                msg = "No, David."
     
     #Limited Responses
     if "no" in sentence:
