@@ -7,9 +7,9 @@ from database.images import cruise, lasagna
 bulli = ['nerd', 'shut up', 'kys', 'nurd', 'loser', 'git gud', 'noob', 'newb', 'n00b', 'stupid', 'idiot', 'dumb', 'dum',
         'shut it', 'up shut', 'idot', 'ideot', 'baka', 'retard']
 
-league = ['pat', 'lea', 'gue', 'league', 'legends']
-
+league = ['pat', 'lea', 'gue', 'league', 'legends', 'lea.gue', 'play']
 NUMBER = 0
+
 def create_response(sentence):
     global NUMBER
     msg = {}
