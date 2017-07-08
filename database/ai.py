@@ -15,7 +15,7 @@ def create_response(sentence):
     global NUMBER
     msg = {}
         
-    if name = data['league']:
+    if name = data['LEAGUE']:
         if any(word in sentence for word in league):
                 msg = "No, David."
     
