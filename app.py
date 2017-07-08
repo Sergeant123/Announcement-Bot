@@ -15,11 +15,12 @@ app = Flask(__name__)
 def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
-  parse = data['text']
+  name = data['name']
+  parse = data['text'] #this step is to change the format in order to add .lower to end
   sentence = parse.lower()
   response = create_response(sentence)
   if response:
-    if data['name'] != "Lunar Bot":
+    if name != "Lunar Bot":
       send_message(response)
   return "ok", 200
 
