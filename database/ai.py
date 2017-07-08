@@ -14,7 +14,7 @@ def create_response(sentence):
     global NUMBER
     msg = {}
         
-    if 'Optimus' in name:
+    if name == 'Optimus Prime':
         msg = 'autobots'
            
     #Limited Responses
