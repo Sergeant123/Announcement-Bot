@@ -3,7 +3,6 @@ import random
 from database.cat_facts import catfacts
 from database.reactions import reaction
 from database.images import cruise, lasagna
-#Make this one database
 
 bulli = ['nerd', 'shut up', 'kys', 'nurd', 'loser', 'git gud', 'noob', 'newb', 'n00b', 'stupid', 'idiot', 'dumb', 'dum',
         'shut it', 'up shut', 'idot', 'ideot', 'baka', 'retard']
