@@ -1,4 +1,5 @@
 import random
+import os
 from database.cat_facts import catfacts
 from database.reactions import reaction
 from database.images import cruise, lasagna
@@ -14,7 +15,7 @@ def create_response(sentence):
     global NUMBER
     msg = {}
         
-    if "Optimus" in name:
+    if name = data['league']:
         if any(word in sentence for word in league):
                 msg = "No, David."
     
