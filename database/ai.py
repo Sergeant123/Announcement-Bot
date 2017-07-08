@@ -13,11 +13,7 @@ NUMBER = 0
 def create_response(sentence):
     global NUMBER
     msg = {}
-        
-    if name = "Optimus Prime":
-        if any(word in sentence for word in league):
-                msg = "No, David."
-    
+           
     #Limited Responses
     if "no" in sentence:
         NUMBER+=1
