@@ -14,7 +14,7 @@ def create_response(sentence):
     global NUMBER
     msg = {}
         
-    if name = "Optimus Prime":
+    if "Optimus" in name:
         if any(word in sentence for word in league):
                 msg = "No, David."
     
