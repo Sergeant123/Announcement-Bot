@@ -1,5 +1,5 @@
 import random
-import os
+#import os
 from database.cat_facts import catfacts
 from database.reactions import reaction
 from database.images import cruise, lasagna
