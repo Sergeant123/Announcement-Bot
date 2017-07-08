@@ -13,6 +13,9 @@ NUMBER = 0
 def create_response(sentence):
     global NUMBER
     msg = {}
+        
+    if 'Optimus' in name:
+        msg = 'autobots'
            
     #Limited Responses
     if "no" in sentence:
