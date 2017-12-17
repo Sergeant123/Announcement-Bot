@@ -6,7 +6,7 @@ from urllib.request import Request, urlopen
 from flask import Flask, request
 
 from bot_core.ai import post_response
-from bot_core.echo.echo import echo_response
+#from bot_core.echo.echo import echo_response
 
 app = Flask(__name__)
 
@@ -21,7 +21,7 @@ def webhook():
   text = raw_text.lower()
   response = post_response(text)
   if response:
-    if name != "yoda bot":
+    if data['name'] != "Yoda Bot":
       send_message(response)
   return "ok", 200
 
