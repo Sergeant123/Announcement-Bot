@@ -1,7 +1,7 @@
 """##########################
 # Imports
 ##########################"""
-from echo.echo import echo_response
+#from echo.echo import echo_response
 
 """##########################
 # Bot Core
@@ -13,8 +13,8 @@ def post_response(text):
   if 'test' in text:
     message = "Broken I am"
 
-  if echo(text): 
-     message = (echo_response(text))
+  #if echo(text): 
+   #  message = (echo_response(text))
   
   return message
 
