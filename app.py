@@ -1,5 +1,3 @@
-#Note, this bot was created to respond to a friend in chat who repeats same pictures and phrases
-
 import os
 import sys
 import json
@@ -15,10 +13,12 @@ app = Flask(__name__)
 def webhook():
   data = request.get_json()
   log('Recieved {}'.format(data))
-  name = data['name']
-  parse = data['text'] #this step is to change the format in order to add .lower to end
-  sentence = parse.lower()
-  response = create_response(sentence)
+  raw_name = data['name']
+  raw_text = data['text']
+  #This saves the lowercase version as something else
+  name = raw_name.lower()
+  text = raw_text.lower()
+  response = post_response(text)
   if response:
     if name != "Lunar Bot":
       send_message(response)
