@@ -8,6 +8,7 @@ from echo.echo import echo_response
 ##########################"""
 #create a function to determine which database to read from
 def post_response(text):
+  message = {}
   
   if 'test' in text:
     message = "Broken I am"
