@@ -8,8 +8,7 @@ import echo.echo.py
 ##########################"""
 #create a function to determine which database to read from
 def post_response(text):
- # if "cat" in text:
-  #   return("cat")
-                  
-   return(export_hrl_response(text))
+  if echo(text): 
+     message = (echo(text))
+     return message
 
