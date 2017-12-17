@@ -5,7 +5,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from flask import Flask, request
 
-from database.ai import create_response
+from bot_core.ai import post_response
 
 app = Flask(__name__)
 
@@ -20,7 +20,7 @@ def webhook():
   text = raw_text.lower()
   response = post_response(text)
   if response:
-    if name != "Lunar Bot":
+    if name != "yoda bot":
       send_message(response)
   return "ok", 200
 
