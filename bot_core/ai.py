@@ -11,6 +11,7 @@ def post_response(text):
   
   if 'test' in text:
     message = "Broken I am"
+    return message
 
   if echo(text): 
      message = (echo_response(text))
