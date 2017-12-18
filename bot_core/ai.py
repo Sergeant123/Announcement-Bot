@@ -1,7 +1,7 @@
 """##########################
 # Imports
 ##########################"""
-from echo.response import echo_response
+#from echo.response import echo_response
 
 """##########################
 # Bot Core
