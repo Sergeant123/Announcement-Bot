@@ -15,7 +15,7 @@ def post_response(text):
     message = "Broken I am"
 
   if echo(text): 
-     message = (echo_response(text))
+     message = echo_response(text)
   
   return message
 
