@@ -2,7 +2,7 @@
 # Imports
 ##########################"""
 #from echo.response import echo_response
-from folder.file import echo_response
+#from folder.file import echo_response
 
 """##########################
 # Bot Core
