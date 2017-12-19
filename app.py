@@ -6,7 +6,7 @@ from urllib.request import Request, urlopen
 from flask import Flask, request
 
 from bot_core.ai import post_response
-#from bot_core.echo.response import echo_response
+from bot_core.folder.file import echo_response
 
 app = Flask(__name__)
 
