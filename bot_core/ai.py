@@ -18,7 +18,7 @@ def post_response(text):
      #message = echo_response(text)
   
   elif '#yoda' in text:
-    echo = "text"
+    echo = text
     message = echo
     
   
