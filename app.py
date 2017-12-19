@@ -19,7 +19,7 @@ def webhook():
   #This saves the lowercase version as something else
   name = raw_name.lower()
   text = raw_text.lower()
-  response = post_response(text)
+  response = post_response(text, raw_text)
   if response:
     if name != "yoda_bot":
       send_message(response)
