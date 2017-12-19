@@ -14,8 +14,13 @@ def post_response(text):
   if 'test' in text:
     message = "Broken I am"
 
-  elif echo_response(text): 
-     message = echo_response(text)
+  #elif echo_response(text): 
+     #message = echo_response(text)
+  
+  elif '#yoda' in text:
+    echo = "Working I am"
+    message = echo
+    
   
   return message
 
